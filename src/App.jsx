@@ -1,11 +1,8 @@
-import Contact from './components/Contact'
-
+import Contact from "./components/Contact"
 function App() {
 
   return (
-    <>
-      <Contact/>
-    </>
+   <Contact/>
   )
 }
 

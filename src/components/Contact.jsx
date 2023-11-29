@@ -1,28 +1,22 @@
 import { useState } from 'react';
-import { db } from '../Firebase';
-import { collection, addDoc} from 'firebase/firestore';
+import { firestore } from '../Firebase';
 const Contact = () => {
-
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-
-    const handleSubmit = async(e) => {
-        e.preventDefault();
-
-       await addDoc(collection(db, "contacts"),{
-                name: name,
-                email: email,
-            })
-            .then(() => {
-                alert("Information has been sent");
-            })
-            .catch((error) => {
-                alert(error.message);
-            });
-
-        setName("");
-        setEmail("");
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(name, email);
+  
+      firestore.collection("messages").add({
+        name,
+        email
+      }).then(() => {
+        setName(""),
+        setEmail("")
+      }).catch((error) => console.error("Error submitting data", error))
     };
+  
 
     return (
         <form className='form' onSubmit={handleSubmit}>

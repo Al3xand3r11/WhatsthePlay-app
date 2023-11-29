@@ -1,6 +1,5 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -10,13 +9,10 @@ const firebaseConfig = {
   storageBucket: "whatstheplay-app.appspot.com",
   messagingSenderId: "542259948242",
   appId: "1:542259948242:web:50dd43cc2cc2b6d4c0db0b",
-  measurementId: "G-8CTF6GLNDT"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
 
-const db = getFirestore(app);
+firebase.initializeApp(firebaseConfig);
 
-
-export default {db}; 
+export const firestore = firebase.firestore()
