@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { firestore } from '../Firebase';
+import { firestore } from '../../Firebase';
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
