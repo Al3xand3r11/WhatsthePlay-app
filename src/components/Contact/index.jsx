@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { firestore } from '../../Firebase';
+import { ContactContainer } from './ContactStyled';
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -19,6 +20,7 @@ const Contact = () => {
   
 
     return (
+      <ContactContainer>
         <form className='form' onSubmit={handleSubmit}>
             <h1>Contact Form</h1>
 
@@ -39,6 +41,7 @@ const Contact = () => {
             <button type="submit">Submit</button>
 
         </form>
+        </ContactContainer>
     )
 }
 
