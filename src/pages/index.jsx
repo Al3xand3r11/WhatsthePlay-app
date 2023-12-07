@@ -1,4 +1,5 @@
 import { useState } from "react";
+import HeroSection from "../components/Info";
 import NavBar from "../components/NavBar";
 import Contact from "../components/Contact";
 
@@ -11,6 +12,7 @@ const Home = () => {
     return(
         <>
             <NavBar toggle={toggle} />
+            <HeroSection />
             <Contact />
         </>
     );
