@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import MemberBackground from '../../images/MembersBackground.webp';
 
 export const MembersContainer = styled.div`
   height: 800px;
@@ -6,7 +7,7 @@ export const MembersContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  background-image: url(${MemberBackground});
 
   @media screen and (max-width: 768px) {
     height: 1100px;

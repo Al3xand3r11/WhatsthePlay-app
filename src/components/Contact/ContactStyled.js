@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import ContactBackground from '../../images/ContactBackground.webp';
 
 export const ContactContainer = styled.div`
-background: 0c0c0c;
+background-image: url(${ContactBackground});
   display: flex;
   justify-content: center;
   align-items: center;

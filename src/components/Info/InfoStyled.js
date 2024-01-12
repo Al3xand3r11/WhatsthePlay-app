@@ -3,7 +3,6 @@ import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import backgroundImg from '../../images/InfoSection.webp';
 
 export const HeroContainer = styled.div`
-  background: 0c0c0c;
   background-image: url(${backgroundImg});
   display: flex;
   justify-content: center;
@@ -12,6 +11,7 @@ export const HeroContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
+  filter: blur(5px);
 
 `;
 
@@ -38,7 +38,7 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-  color: black;
+  color: white;
   font-size: 48px;
   text-align: center;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ApiBackground from '../../images/ApiBackground.jpeg';
 
 export const StatsContainer = styled.div`
   height: 800px;
@@ -6,7 +7,7 @@ export const StatsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: black;
+  background-image: url(${ApiBackground});
 
   @media screen and (max-width: 768px) {
     height: 1100px;
