@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const MembersContainer = styled.div`
+export const StatsContainer = styled.div`
   height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  background: black;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -16,7 +16,7 @@ export const MembersContainer = styled.div`
   }
 `;
 
-export const MembersWrapper = styled.div`
+export const StatsWrapper = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
@@ -35,7 +35,7 @@ export const MembersWrapper = styled.div`
   }
 `;
 
-export const MembersCard = styled.div`
+export const StatsCard = styled.div`
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -54,13 +54,13 @@ export const MembersCard = styled.div`
   }
 `;
 
-export const MembersIcon = styled.img`
+export const StatsIcon = styled.img`
   height: 160px;
   width: 160px;
   margin-bottom: 10px;
 `;
 
-export const MembersH1 = styled.h1`
+export const StatsH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
@@ -70,11 +70,11 @@ export const MembersH1 = styled.h1`
   }
 `;
 
-export const MembersH2 = styled.h2`
+export const StatsH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
 `;
-export const MembersP = styled.p`
+export const StatsP = styled.p`
   font-size: 1rem;
   text-align: center;
 `;
