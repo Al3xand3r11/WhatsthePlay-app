@@ -1,30 +1,22 @@
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
-import backgroundImg from '../../images/InfoSection.webp';
 
 export const HeroContainer = styled.div`
-  background-image: url(${backgroundImg});
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
   height: 800px;
   position: relative;
   z-index: 1;
-  filter: blur(5px);
 
 `;
 
-export const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+export const Image = styled.img`
   width: 100%;
   height: 100%;
-  overflow: hidden;
-`;
+  -o-object-fit: cover;
+  object-fit: cover;
+`
 
 
 export const HeroContent = styled.div`

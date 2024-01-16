@@ -1,12 +1,14 @@
 import { useState } from "react"; 
 import { Button } from "../ButtonElements";
+import backgroundImg from '../../images/InfoSection.png';
 import { 
-    HeroContainer,
+  HeroContainer,
   HeroContent,
   HeroH1,
   ArrowForward,
   ArrowRight,
   HeroBtnWrapper,
+  Image,
 } from './InfoStyled';
 
 const HeroSection = () => {
@@ -18,6 +20,7 @@ const HeroSection = () => {
 
     return (
         <HeroContainer>
+            <Image src={backgroundImg}/>
             <HeroContent>
                 <HeroH1>What&apos;s the Play Podcast</HeroH1>
                 <HeroBtnWrapper>

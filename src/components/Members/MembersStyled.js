@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import MemberBackground from '../../images/MembersBackground.webp';
 
 export const MembersContainer = styled.div`
   height: 800px;
@@ -7,7 +6,8 @@ export const MembersContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(${MemberBackground});
+  position: relative;
+  z-index: 1;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -15,6 +15,23 @@ export const MembersContainer = styled.div`
   @media screen and (max-width: 480px) {
     height: 1300px;
   }
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+`
+
+export const MembersContent = styled.div`
+  z-index: 3;
+  max-width: 1200px;
+  position: absolute;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const MembersWrapper = styled.div`

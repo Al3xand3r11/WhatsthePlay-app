@@ -1,7 +1,10 @@
 import React from "react";
 import icon1 from '../../images/profilepic.png';
+import MemberBackground from '../../images/MembersBackground.png';
 import {
+    Image,
     MembersContainer,
+    MembersContent,
     MembersH1,
     MembersH2,
     MembersWrapper,
@@ -13,8 +16,10 @@ import {
 const Members = () => {
     return (
         <MembersContainer id="Members">
-      <MembersH1>Members</MembersH1>
-      <MembersWrapper>
+          <Image src={MemberBackground}/>
+        <MembersContent>
+        <MembersH1>Members</MembersH1>
+        <MembersWrapper>
           <MembersCard>
             <MembersIcon src={icon1} />
             <MembersH2>Jalen</MembersH2>
@@ -58,6 +63,7 @@ const Members = () => {
             </MembersP>
           </MembersCard>
       </MembersWrapper>
+      </MembersContent>
     </MembersContainer>
     )
 }
