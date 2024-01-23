@@ -5,12 +5,16 @@ export const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
-  position: relative;
-  z-index: 1;
+  height: 1100px;
 
 `;
 
+export const SideWrapper = styled.div`
+  align-items: center;
+  grid-area: sidebar;
+  position: absolute;
+
+`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -19,19 +23,32 @@ export const Image = styled.img`
 `
 
 
+export const SideImage = styled.img`
+height: 100px;
+width: 100px;
+`
 export const HeroContent = styled.div`
-  z-index: 3;
-  max-width: 1200px;
+  max-width: 2200px;
   position: absolute;
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
+  grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr;
+  grid-template-areas: 
+  "sidebar main main main"
+  "sidebar main main main"
+  "sidebar main main main"
+  "sidebar main main main";
 `;
+
+export const HeroMain = styled.div`
+  grid-area: main;
+  padding: 25rem;
+
+`
 
 export const HeroH1 = styled.h1`
   color: white;
-  font-size: 48px;
+  font-size: 100px;
   text-align: center;
 
   @media screen and (max-width: 768px) {
@@ -42,6 +59,11 @@ export const HeroH1 = styled.h1`
     font-size: 32px;
   }
 `;
+
+export const HeroColor = styled.span`
+color: #119af5;
+display: inline;
+`
 export const HeroP = styled.p`
   margin-top: 24px;
   color: #fff;

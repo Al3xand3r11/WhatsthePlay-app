@@ -4,7 +4,7 @@ export const StatsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 1100px;
   position: relative;
   z-index: 1;
 
