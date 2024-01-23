@@ -31,10 +31,18 @@ const HeroSection = () => {
             <Image src={backgroundImg}/>
             <HeroContent>
             <SideWrapper>
-                <SideImage src={instagram}/>
-                <SideImage src={tiktok}/>
-                <SideImage src={twitter}/>
-                <SideImage src={youtube}/>
+                <a href="https://www.instagram.com/whatstheplayproductions/" target="_blank">
+                    <SideImage src={instagram}/>
+                </a>
+                <a href="https://www.tiktok.com/@whatstheplayproductions" target="_blank">
+                    <SideImage src={tiktok}/>
+                </a>
+                <a href="https://twitter.com/WTPlayPodcast" target="_blank">
+                    <SideImage src={twitter}/>
+                </a>
+                <a href="https://www.youtube.com/@whatstheplayproductions" target="_blank">
+                    <SideImage src={youtube}/>
+                </a>
             </SideWrapper>
             <HeroMain>
                 <HeroH1>What&apos;s The</HeroH1>

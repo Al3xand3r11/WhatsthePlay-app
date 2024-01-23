@@ -26,6 +26,12 @@ export const Image = styled.img`
 export const SideImage = styled.img`
 height: 100px;
 width: 100px;
+
+&:hover {
+    transform: scale(1.4);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
 `
 export const HeroContent = styled.div`
   max-width: 2200px;
@@ -96,3 +102,4 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
   margin-left: 8px;
   font-size: 20px;
 `;
+
