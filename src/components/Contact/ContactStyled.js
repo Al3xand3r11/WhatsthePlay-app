@@ -4,10 +4,17 @@ export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
   height: 800px;
   position: relative;
   z-index: 1;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    height: 1100px;
+  }
+  @media screen and (max-width: 480px) {
+    height: 1300px;
+  }
 `;
 
 export const Image = styled.img`

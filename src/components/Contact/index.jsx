@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { firestore } from '../../Firebase';
 import { ContactContainer, Image, ContactContent } from './ContactStyled';
-import ContactBackground from '../../images/ContactBackground.png';
+import ContactBackground from '../../images/ContactBackground.jpeg';
 
 const Contact = () => {
     const [name, setName] = useState("");

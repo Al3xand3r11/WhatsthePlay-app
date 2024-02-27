@@ -1,5 +1,4 @@
 import React from "react";
-import icon1 from '../../images/profilepic.png';
 import Brian from '../../images/Brian.png';
 import Caleb from '../../images/Caleb.jpg';
 import CT from '../../images/CT.jpg';

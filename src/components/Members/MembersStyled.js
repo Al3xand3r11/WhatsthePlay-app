@@ -76,6 +76,7 @@ export const MembersIcon = styled.img`
   height: 160px;
   width: 160px;
   margin-bottom: 10px;
+  border-radius: 50%;
 `;
 
 export const MembersH1 = styled.h1`
