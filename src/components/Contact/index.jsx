@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { firestore } from '../../Firebase';
-import { ContactContainer, Image, ContactContent } from './ContactStyled';
+import { ContactContainer, Image, ContactContent, ContactH1 } from './ContactStyled';
 import ContactBackground from '../../images/ContactBackground.jpeg';
+import { Button, Box, TextField, FormControl } from '@mui/material';
+import { Stack } from '@mui/system';
 
 const Contact = () => {
     const [name, setName] = useState("");
@@ -25,26 +27,63 @@ const Contact = () => {
       <ContactContainer>
         <Image src={ContactBackground} />
         <ContactContent>
+        <Box borderRadius='10%'height={400} width={800} sx={{
+          bgcolor: 'rgba(0,0,0,.5)',
+          
+        }}>
+        <Stack>
         <form className='form' onSubmit={handleSubmit}>
-            <h1>Contact Form</h1>
-
-            <label>Name</label>
-            <input
+          <Stack alignItems='center' paddingTop={5}>
+            <ContactH1>Get News From WTP!</ContactH1>
+          </Stack>
+          <Stack width={450} paddingLeft={10} paddingBottom={5} paddingTop={8}>
+            <TextField
                 placeholder="Name"
+                label="Name"
+                required
+                variant='filled'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                margin="normal"
+                color="info"
+                InputProps={{
+                  style: {
+                    color: 'white'
+                  }
+                }}
+                InputLabelProps={{
+                  style: {
+                    color: 'white'
+                  }
+                }}
             />
 
-            <label>Email</label>
-            <input
+            <TextField
                 placeholder="Email"
+                required
+                label="Email"
+                variant='filled'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                InputProps={{
+                  style: {
+                    color: 'white'
+                  }
+                }}
+                InputLabelProps={{
+                  style: {
+                    color: 'white'
+                  }
+                }}
             />
-
-            <button type="submit">Submit</button>
+            </Stack>
+            <Stack width={250} paddingLeft={10}>
+            <Button type="submit" variant='contained' color='info'>Submit</Button>
+            </Stack>
 
         </form>
+        </Stack>
+        </Box>
         </ContactContent>
         </ContactContainer>
     )

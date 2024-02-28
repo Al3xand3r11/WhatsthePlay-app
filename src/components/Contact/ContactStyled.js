@@ -33,3 +33,7 @@ export const ContactContent = styled.div`
   flex-direction: column;
   align-items: center;
 `
+
+export const ContactH1 = styled.h1`
+  color: white;
+`
