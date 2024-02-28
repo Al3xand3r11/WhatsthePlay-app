@@ -48,9 +48,14 @@ const HeroSection = () => {
                 <HeroH1>What&apos;s The</HeroH1>
                 <HeroH1><HeroColor>Play</HeroColor> Podcast</HeroH1>
                 <HeroBtnWrapper>
+                    <a 
+                        href={"https://www.youtube.com/@whatstheplayproductions/videos"}
+                        target="blank"
+                    >
                     <Button onMouseEnter={onHover} onMouseLeave={onHover}>
                         Episodes{hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
+                    </a>
                 </HeroBtnWrapper>
             </HeroMain>
             </HeroContent>
