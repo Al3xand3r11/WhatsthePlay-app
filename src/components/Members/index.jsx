@@ -29,42 +29,42 @@ const Members = () => {
             <MembersIcon src={JG} />
             <MembersH2>Jalen</MembersH2>
             <MembersP>
-            Lorem ipsum dolor sit amet
+            Football, Baseball, Basketball
             </MembersP>
           </MembersCard>
           <MembersCard>
             <MembersIcon src={JB} />
             <MembersH2>Demarco</MembersH2>
             <MembersP>
-            Lorem ipsum dolor sit amet
+            Basketball
             </MembersP>
           </MembersCard>
           <MembersCard>
             <MembersIcon src={CT} />
             <MembersH2>Christian</MembersH2>
             <MembersP>
-            Lorem ipsum dolor sit amet
+            Football, Basketball, WWE
             </MembersP>
           </MembersCard>
           <MembersCard>
             <MembersIcon src={Nate} />
             <MembersH2>Nate</MembersH2>
             <MembersP>
-            Lorem ipsum dolor sit amet
+            Basketball, Soccer, WWE
             </MembersP>
           </MembersCard>
           <MembersCard>
             <MembersIcon src={Caleb} />
             <MembersH2>Caleb</MembersH2>
             <MembersP>
-            Lorem ipsum dolor sit amet
+            Videographer, Football, Basketball
             </MembersP>
           </MembersCard>
           <MembersCard>
             <MembersIcon src={Brian} />
             <MembersH2>Brian</MembersH2>
             <MembersP>
-            Lorem ipsum dolor sit amet
+            Football, Baseball, Basketball, WWE
             </MembersP>
           </MembersCard>
       </MembersWrapper>
