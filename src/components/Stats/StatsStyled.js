@@ -32,3 +32,7 @@ export const StatsContent = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+export const StatsH1 = styled.h1`
+  color: white
+`
