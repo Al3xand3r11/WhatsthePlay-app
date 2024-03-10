@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { firestore } from '../../Firebase';
-import { ContactContainer, Image, ContactContent, ContactH1 } from './ContactStyled';
+import { ContactContainer, Image, ContactContent, ContactH1, ContactWrapper, ContactRow } from './ContactStyled';
 import ContactBackground from '../../images/ContactBackground.jpeg';
 import { Button, Box, TextField, FormControl } from '@mui/material';
 import { Stack } from '@mui/system';
@@ -27,6 +27,8 @@ const Contact = () => {
       <ContactContainer>
         <Image src={ContactBackground} />
         <ContactContent>
+        <ContactWrapper>
+        <ContactRow>
         <Box borderRadius='10%'height={400} width={800} sx={{
           bgcolor: 'rgba(0,0,0,.5)',
           
@@ -84,6 +86,8 @@ const Contact = () => {
         </form>
         </Stack>
         </Box>
+        </ContactRow>
+        </ContactWrapper>
         </ContactContent>
         </ContactContainer>
     )
