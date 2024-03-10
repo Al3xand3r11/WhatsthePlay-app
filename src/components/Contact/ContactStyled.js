@@ -4,7 +4,7 @@ export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 600px;
   position: relative;
   z-index: 1;
   flex-direction: column;
@@ -25,10 +25,8 @@ export const Image = styled.img`
 `
 
 export const ContactContent = styled.div`
-   z-index: 3;
   max-width: 1200px;
   position: absolute;
-  padding: 8px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
