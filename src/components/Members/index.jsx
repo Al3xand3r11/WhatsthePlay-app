@@ -50,7 +50,7 @@ const Members = () => {
             <MembersIcon src={Nate} />
             <MembersH2>Nate</MembersH2>
             <MembersP>
-            Basketball, Soccer, WWE
+            Basketball, Soccer, MMA
             </MembersP>
           </MembersCard>
           <MembersCard>

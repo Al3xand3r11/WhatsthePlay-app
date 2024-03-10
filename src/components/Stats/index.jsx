@@ -3,28 +3,37 @@ import {
     StatsContainer,
     StatsContent,
     StatsH1,
+    StatsWrapper,
 } from "./StatsStyled";
 import ApiBackground from '../../images/ApiBackground.png'
 import YoutubeClip from "../YouTubeVids/YoutubeVid";
-import { Stack } from "@mui/system";
 import YoutubeBball from "../YouTubeVids/YoutubeVidBball";
 import YoutubeSpotlight from "../YouTubeVids/YoutubeVidSpot";
+import { Stack } from "@mui/system";
+import { useBreakpointMatch } from "../../utils/hooks/useBreakpointMatch";
 
 const Stats = () => {
+    const isCompact = useBreakpointMatch('md');
     return (
         <StatsContainer id="Stats">
             <Image src={ApiBackground}/>
             <StatsContent>
-                <Stack direction="row" spacing={75} paddingBottom={10}>
+                <StatsWrapper>
+                <Stack direction={isCompact ? 'column' : 'row'} >
+                    <Stack alignItems='center' >
                     <StatsH1>Basketball</StatsH1>
+                    <YoutubeBball/>
+                    </Stack>
+                    <Stack alignItems='center'>
                     <StatsH1>Football</StatsH1>
+                    <YoutubeClip/>
+                    </Stack>
+                    <Stack  alignItems='center'>
                     <StatsH1>Spotlight</StatsH1>
+                    <YoutubeSpotlight/>
+                    </Stack>
                 </Stack>
-                <Stack direction="row" spacing={10}>
-                <YoutubeBball/>
-                <YoutubeClip/>
-                <YoutubeSpotlight/>
-                </Stack>
+                </StatsWrapper>
             </StatsContent>
         </StatsContainer>
     );

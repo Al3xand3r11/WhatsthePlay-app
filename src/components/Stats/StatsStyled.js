@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const StatsContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 1100px;
   position: relative;
+  flex-direction: column;
   z-index: 1;
 
   @media screen and (max-width: 768px) {
@@ -16,6 +17,25 @@ export const StatsContainer = styled.div`
   }
 `;
 
+export const StatsWrapper = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 100px;
+  padding: 0 100px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+`
+
 export const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -24,15 +44,9 @@ export const Image = styled.img`
 `;
 
 export const StatsContent = styled.div`
-  z-index: 3;
-  max-width: 1200px;
   position: absolute;
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 
 export const StatsH1 = styled.h1`
-  color: white
+  color: white;
 `
