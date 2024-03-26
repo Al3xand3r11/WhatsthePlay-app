@@ -5,6 +5,9 @@ export default {
     extend: {
       fontFamily: {
         oswald: ['oswald ', 'sans-serif'],
+      },
+      backgroundImage: {
+        'hero-image': 'url("src/images/InfoSection.png")'
       }
     },
   },

@@ -1,90 +1,70 @@
-import React, {useState, useEffect } from "react";
-import { animateScroll as scroll } from "react-scroll";
-import { FaBars } from "react-icons/fa";
-import { 
-    Nav,
-    NavBarContainer,
-    NavLogo,
-    MobileIcon,
-    NavMenu,
-    NavItem,
-    NavLinks,
-} from "./NavBarStyled";
+import React, { useState } from 'react';
+import {
+  FaBars,
+  FaTiktok,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from 'react-icons/fa';
+import { IoIosClose } from "react-icons/io";
+import { Link } from 'react-scroll';
 
-// eslint-disable-next-line react/prop-types
-const NavBar = ({ toggle }) => {
-    const [scrollNav, setScrollNav] = useState(false);
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
 
-    const changeNav = () => {
-        if (window.scrollY >= 80) {
-            setScrollNav(true)
-        } else {
-            setScrollNav(false)
-        }
-    };
+  return (
+    <nav className=" bg-gray-400 sticky top-0 z-10 backdrop-filter backdrop-blur-md bg-opacity-10">
+        <div className="max-w-5xl mx-auto px-4 ">
+            <div className="flex items-center justify-between h-16 hidden md:flex">
+            <span className="text-2xl text-gray-900 font-semibold">What's The Play Productions</span>
+                <div className="flex space-x-4 text-gray-900">
+                    <a href="#">Home</a>
+                    <a href="#">Info</a>
+                    <a href="#">Members</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div onClick={handleNav} className="md:hidden z-10">
+            <FaBars size={30} className="mr-4 cursor-ponter pl-2" />
+        </div>
+        {/* Mobile Menu */}
+        <div 
+            className={
+                nav 
+                ? "overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex flex-col" 
+                : "absolute top-0 h-screen left-[-100%] ease-in"
+            }
+        >
+            <div
+              className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
+              onClick={() => {
+                setNav(!nav);
+              }}
+            >
+              <IoIosClose className="text-4xl md:hidden" />
+            </div>
+            <ul className="h-full w-full text-center pt-12">
+                <li className='text-2xl py-8'>
+                    <a href='/'>Home</a>
+                </li>
+                <li className='text-2xl py-8'>
+                    <a href='/'>Stats</a>
+                </li>
+                <li className='text-2xl py-8'>
+                    <a href='/'>Members</a>
+                </li>
+                <li className='text-2xl py-8'>
+                    <a href='/'>Contact</a>
+                </li>
+            </ul>
+                
+        </div>
+    </nav>
+  );
+};
 
-    useEffect(() => {
-        window.addEventListener("scroll", changeNav);
-    }, []);
-
-    const toggleHome = () => {
-        scroll.scrollToTop();
-    };
-
-    return(
-        <>
-            <Nav scrollNav={scrollNav}>
-                <NavBarContainer>
-                    <NavLogo to="/" onClick={toggleHome}>
-                        Whats The Play
-                    </NavLogo>
-                    <MobileIcon onClick={toggle}>
-                        <FaBars/>
-                    </MobileIcon>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks
-                                to="Stats"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                            >
-                                Stats
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks
-                                to="Members"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                            >
-                                {""}
-                                Members
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks
-                                to="Contact"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                            >
-                                {""}
-                                Contact Us
-                            </NavLinks>
-                        </NavItem>
-                    </NavMenu>
-                </NavBarContainer>
-            </Nav>
-        </>
-    )
-}
-
-export default NavBar;
+export default Navbar;
