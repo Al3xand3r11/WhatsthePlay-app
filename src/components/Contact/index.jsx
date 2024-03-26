@@ -3,7 +3,7 @@ import Title from "../Title";
 
 const Contact = () => {
     return (
-      <div className='bg-contact-image w-full h-screen bg-cover bg-center '>
+      <div id="Contact" className='bg-contact-image w-full h-screen bg-cover bg-center '>
       <div className="flex flex-col mb-10 mx-auto pt-52">
             <div className="flex justify-center items-center">
                 <form

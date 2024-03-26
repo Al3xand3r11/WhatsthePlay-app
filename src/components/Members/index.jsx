@@ -5,7 +5,7 @@ import Title from "../Title";
 
 const Members = () => {
     return (
-      <div className="bg-member-image w-full h-screen bg-cover bg-center">
+      <div id="Members" className="bg-member-image w-full h-screen bg-cover bg-center">
       <div className="flex flex-col items-center justify-center">
       <Title>Members</Title>
       

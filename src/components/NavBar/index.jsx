@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import {
   FaBars,
-  FaTiktok,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
 } from 'react-icons/fa';
 import { IoIosClose } from "react-icons/io";
 import { Link } from 'react-scroll';
@@ -22,9 +18,9 @@ const Navbar = () => {
             <span className="text-2xl text-white font-semibold">What's The Play Productions</span>
                 <div className="flex space-x-4 text-white">
                     <a href="#">Home</a>
-                    <a href="#">Info</a>
-                    <a href="#">Members</a>
-                    <a href="#">Contact</a>
+                    <a href="#Stats">Info</a>
+                    <a href="#Members">Members</a>
+                    <a href="#Contact">Contact</a>
                 </div>
             </div>
         </div>
