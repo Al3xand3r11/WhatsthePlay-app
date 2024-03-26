@@ -9,9 +9,9 @@ import youtube from '../../images/icons/youtube.png';
 const HeroSection = () => {
 
     return (
-        <div className='bg-hero-image w-full h-screen bg-cover bg-center'>
-            <div>
-                <h1>Test Hero Section</h1>
+        <div className='bg-hero-image w-full h-screen bg-cover bg-center '>
+            <div className="flex pl-20 items-center justify-center font-extrabold text-8xl pt-60">
+                <h1 className="text-white" >What's The <br/> {" "}<span className="text-blue-400">Play</span> {" "} Podcast</h1>
             </div>
         </div>
     );

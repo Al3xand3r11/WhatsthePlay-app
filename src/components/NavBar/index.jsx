@@ -16,11 +16,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" bg-gray-400 sticky top-0 z-10 backdrop-filter backdrop-blur-md bg-opacity-10">
+    <nav className="fixed bg-gray-400 z-50 backdrop-filter backdrop-blur-md bg-opacity-10 w-full">
         <div className="max-w-5xl mx-auto px-4 ">
             <div className="flex items-center justify-between h-16 hidden md:flex">
-            <span className="text-2xl text-gray-900 font-semibold">What's The Play Productions</span>
-                <div className="flex space-x-4 text-gray-900">
+            <span className="text-2xl text-white font-semibold">What's The Play Productions</span>
+                <div className="flex space-x-4 text-white">
                     <a href="#">Home</a>
                     <a href="#">Info</a>
                     <a href="#">Members</a>

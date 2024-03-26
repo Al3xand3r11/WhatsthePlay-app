@@ -7,7 +7,9 @@ export default {
         oswald: ['oswald ', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-image': 'url("src/images/InfoSection.png")'
+        'hero-image': 'url("src/images/InfoSection.png")',
+        'member-image': 'url("src/images/MembersBackground.png")',
+        'contact-image': 'url("src/images/ContactBackground.png")'
       }
     },
   },
