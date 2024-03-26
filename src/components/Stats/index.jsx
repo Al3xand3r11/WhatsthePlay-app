@@ -1,41 +1,14 @@
-import { 
-    Image,
-    StatsContainer,
-    StatsContent,
-    StatsH1,
-    StatsWrapper,
-} from "./StatsStyled";
-import ApiBackground from '../../images/ApiBackground.png'
-import YoutubeClip from "../YouTubeVids/YoutubeVid";
-import YoutubeBball from "../YouTubeVids/YoutubeVidBball";
-import YoutubeSpotlight from "../YouTubeVids/YoutubeVidSpot";
-import { Stack } from "@mui/system";
-import { useBreakpointMatch } from "../../utils/hooks/useBreakpointMatch";
-
+import Caution from '../../images/icons/caution-sign.png'
 const Stats = () => {
-    const isCompact = useBreakpointMatch('md');
     return (
-        <StatsContainer id="Stats">
-            <Image src={ApiBackground}/>
-            <StatsContent>
-                <StatsWrapper>
-                <Stack direction={isCompact ? 'column' : 'row'} >
-                    <Stack alignItems='center' >
-                    <StatsH1>Basketball</StatsH1>
-                    <YoutubeBball/>
-                    </Stack>
-                    <Stack alignItems='center'>
-                    <StatsH1>Football</StatsH1>
-                    <YoutubeClip/>
-                    </Stack>
-                    <Stack  alignItems='center'>
-                    <StatsH1>Spotlight</StatsH1>
-                    <YoutubeSpotlight/>
-                    </Stack>
-                </Stack>
-                </StatsWrapper>
-            </StatsContent>
-        </StatsContainer>
+        <div id="Stats" className='bg-black w-full h-screen bg-cover bg-center flex-row flex'>
+        <div className="flex pl-20 items-left justify-left text-white font-extrabold text-8xl">
+            <h1>Live Stats <br/> Coming Soon ...</h1>
+        </div>
+        <div>
+            <img src={Caution} className="justify-right items-end w-100 h-100 " />
+        </div>
+    </div>
     );
 };
 

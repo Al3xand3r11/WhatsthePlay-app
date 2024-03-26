@@ -1,95 +1,56 @@
-import { useState } from 'react';
-import { firestore } from '../../Firebase';
-import { ContactContainer, Image, ContactContent, ContactH1, ContactWrapper, ContactRow } from './ContactStyled';
-import ContactBackground from '../../images/ContactBackground.jpeg';
-import { Button, Box, TextField, FormControl } from '@mui/material';
-import { Stack } from '@mui/system';
+import React from "react";
+import Title from "../Title";
 
 const Contact = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log(name, email);
-  
-      firestore.collection("messages").add({
-        name,
-        email
-      }).then(() => {
-        setName(""),
-        setEmail("")
-      }).catch((error) => console.error("Error submitting data", error))
-    };
-  
-
     return (
-      <ContactContainer>
-        <Image src={ContactBackground} />
-        <ContactContent>
-        <ContactWrapper>
-        <ContactRow>
-        <Box borderRadius='10%'height={400} width={800} sx={{
-          bgcolor: 'rgba(0,0,0,.5)',
-          
-        }}>
-        <Stack>
-        <form className='form' onSubmit={handleSubmit}>
-          <Stack alignItems='center' paddingTop={5}>
-            <ContactH1>Get News From WTP!</ContactH1>
-          </Stack>
-          <Stack width={450} paddingLeft={10} paddingBottom={5} paddingTop={8}>
-            <TextField
-                placeholder="Name"
-                label="Name"
-                required
-                variant='filled'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                margin="normal"
-                color="info"
-                InputProps={{
-                  style: {
-                    color: 'white'
-                  }
-                }}
-                InputLabelProps={{
-                  style: {
-                    color: 'white'
-                  }
-                }}
-            />
-
-            <TextField
-                placeholder="Email"
-                required
-                label="Email"
-                variant='filled'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                InputProps={{
-                  style: {
-                    color: 'white'
-                  }
-                }}
-                InputLabelProps={{
-                  style: {
-                    color: 'white'
-                  }
-                }}
-            />
-            </Stack>
-            <Stack width={250} paddingLeft={10}>
-            <Button type="submit" variant='contained' color='info'>Submit</Button>
-            </Stack>
-
-        </form>
-        </Stack>
-        </Box>
-        </ContactRow>
-        </ContactWrapper>
-        </ContactContent>
-        </ContactContainer>
+      <div id="Contact" className='bg-contact-image w-full h-screen bg-cover bg-center '>
+      <div className="flex flex-col mb-10 mx-auto pt-52">
+            <div className="flex justify-center items-center">
+                <form
+                    action="https://getform.io/f/warklrob"
+                    method="POST"
+                    className="flex flex-col w-full md:w-7/12"
+                >
+                    <Title>Contact Us</Title>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        className="p-2 bg-transparent
+                        border-2 rounded-md
+                        focus:outline-none text-white"
+                    />
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="Email"
+                        className="my-2 p-2 bg-transparent
+                        border-2 rounded-md
+                        focus:outline-none text-white"
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Message"
+                        rows="10"
+                        className="p-2 mb-4 bg-transparent
+                        border-2 rounded-md
+                        focus:outline-none text-white"
+                    >
+                    </textarea>
+                    <button 
+                        type="button"
+                        className="text-center inline-block 
+                        px-8 py-3 w-max text-base
+                        font-medium rounded-md text-slate-900
+                        bg-gradient-to-r from-blue-500
+                        to-white drop-shadow-md 
+                        hover:stroke-white">
+                            Stay in the Loop!
+                    </button>
+                </form>
+            </div>
+        </div>
+  </div>
     )
 }
 
