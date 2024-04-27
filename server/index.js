@@ -4,6 +4,12 @@ import cors from "cors";
 import axios from "axios";
 import dotenv from 'dotenv'
 
+const today = new Date();
+const day = 14;
+const month = ("0" + (today.getMonth() + 1)).slice(-2);
+const year = today.getFullYear();
+const fullDay = year + "-" + month + "-" + day;
+
 dotenv.config();
 
 
@@ -20,7 +26,7 @@ app.use(cors(corsOption));
 app.get('/', (req,res) => {
     const config = {
         method: 'get',
-        url: 'https://v2.nba.api-sports.io/games?date=2024-04-14',
+        url: `https://v2.nba.api-sports.io/games?date=${fullDay}`,
         headers: {
           'x-rapidapi-key': process.env.REACT_API_KEY,
           'x-rapidapi-host': 'v2.nba.api-sports.io'

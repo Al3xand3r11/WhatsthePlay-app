@@ -1,3 +1,4 @@
+export default [ 
 {
   "get": "games/",
   "parameters": { "date": "2024-04-14" },
@@ -906,3 +907,4 @@
     }
   ]
 }
+]
