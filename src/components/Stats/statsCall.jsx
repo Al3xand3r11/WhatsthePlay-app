@@ -1,20 +1,18 @@
 import axios from "axios";
+import { useCallback } from "react";
 import { useState, useEffect } from "react";
 import data from "./data";
 const StatsCall = ({}) => {
   const [dailyStats, setDailyStats] = useState();
 
-  {/*const pullStats = async() => {
+  const pullStats = async() => {
     const config = {
       method: 'get',
       url: 'http://localhost:8000/',
     };
-
-    await
-    axios(config)
+     await axios(config)
     .then(function (response) {
-      const finalStats = (response.data);
-      setDailyStats(finalStats);
+      setDailyStats(response.data);
     })
     .catch(function (error) {
       console.log(error);
@@ -22,19 +20,18 @@ const StatsCall = ({}) => {
 
     }
 
-  useEffect(() => {
-    pullStats();
-
-    setInterval(pullStats, 1000 * 60 * 60)
-  })*/}
-
-  console.log(data[0].response.map((answer) => answer.scores ));
+    useEffect(() => {
+      const interval = setInterval(() => {
+        pullStats();
+      }, 600000);
+      return () => clearInterval(interval);
+    },[])
 
 return(
   
   <div className="flex flex-col md:flex-row items-center justify-center  ">
   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-  { data[0].response.map((answer) => 
+  { dailyStats?.response.map((answer) => 
   <div class="mx-auto my-2 max-w-md rounded overflow-hidden shadow-md text-xs pl-10">
   <div class="flex bg-gray-200 px-2 py-2">
     <div class="w-5/12 text-gray-700 text-left text-red-700">Quarter: {answer.periods.current}</div>

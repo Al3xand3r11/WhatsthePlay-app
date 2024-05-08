@@ -2,13 +2,11 @@ const PORT = 8000;
 import express from "express";
 import cors from "cors";
 import axios from "axios";
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+import date from 'date-and-time';
 
-const today = new Date();
-const day = 14;
-const month = ("0" + (today.getMonth() + 1)).slice(-2);
-const year = today.getFullYear();
-const fullDay = year + "-" + month + "-" + day;
+const now = new Date();
+const fullDay = date.format(now,'YYYY-MM-DD')
 
 dotenv.config();
 
