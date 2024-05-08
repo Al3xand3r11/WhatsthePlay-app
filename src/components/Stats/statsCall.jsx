@@ -23,7 +23,7 @@ const StatsCall = ({}) => {
     useEffect(() => {
       const interval = setInterval(() => {
         pullStats();
-      }, 600000);
+      }, 10000);
       return () => clearInterval(interval);
     },[])
 
