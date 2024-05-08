@@ -8,7 +8,7 @@ const StatsCall = ({}) => {
   const pullStats = async() => {
     const config = {
       method: 'get',
-      url: 'http://localhost:8000/',
+      url: 'https://whatstheplay-app.onrender.com',
     };
      await axios(config)
     .then(function (response) {
