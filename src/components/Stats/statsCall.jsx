@@ -20,22 +20,18 @@ const StatsCall = ({}) => {
 
     }
 
-    {/*useEffect(() => {
+    useEffect(() => {
+      const update = 30 * 60 * 1000;//30 minute updates
       const interval = setInterval(() => {
         pullStats();
-      }, 10000);
+      }, update);
       return () => clearInterval(interval);
-    },[])*/}
-
-    const testStats = useCallback(() => {
-      pullStats();
-    })
+    },[])
 
 return(
   
   <div className="flex flex-col md:flex-row items-center justify-center  ">
   <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-    <button onClick={testStats}>Test</button>
   { dailyStats?.response.map((answer) => 
   <div class="mx-auto my-2 max-w-md rounded overflow-hidden shadow-md text-xs pl-10">
   <div class="flex bg-gray-200 px-2 py-2">
