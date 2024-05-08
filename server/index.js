@@ -15,7 +15,7 @@ const app = express()
 
 const corsOption = {
     credentials: true,
-    origin: ['https://www.whatstheplaypod.com']
+    origin: "*",
 }
 
 app.use(cors(corsOption));
