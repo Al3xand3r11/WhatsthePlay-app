@@ -15,7 +15,7 @@ const app = express()
 
 const corsOption = {
     credentials: true,
-    origin: ['http://localhost:5173']
+    origin: ['https://www.whatstheplaypod.com']
 }
 
 app.use(cors(corsOption));
