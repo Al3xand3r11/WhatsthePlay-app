@@ -1,4 +1,4 @@
-import axios from "axios";
+{/*import axios from "axios";
 import { useCallback } from "react";
 import { useState, useEffect } from "react";
 import data from "./data";
@@ -86,3 +86,4 @@ return(
 };
 
 export default StatsCall;
+*/}
