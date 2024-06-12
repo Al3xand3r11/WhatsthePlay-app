@@ -15,7 +15,7 @@ const Stats = () => {
 
     const getArticles = async () => {
         try {
-            const res = await axios.get("http://localhost:8000/");
+            const res = await axios.get("https://whatstheplay-app.onrender.com");
             setArticles(res.data.slice(0, 9));
         } catch (error) {
             console.log(error);
