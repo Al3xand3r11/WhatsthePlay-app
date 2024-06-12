@@ -13,6 +13,7 @@ function App() {
       <NavBar/>
       <HeroSection/>
       <Stats/>
+      <ContentBreak/>
       <Members/>
       <ContentBreak/>
       <Contact/>
