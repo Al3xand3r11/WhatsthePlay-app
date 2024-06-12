@@ -13,3 +13,7 @@ html, body {
 html{
     scroll-behavior: smooth;
 }
+
+body {
+    @apply bg-black
+}

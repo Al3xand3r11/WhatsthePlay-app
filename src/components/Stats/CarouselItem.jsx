@@ -4,7 +4,7 @@ import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
 export default function Carousel({ slides }) {
 
-    const [current, setCurrent] = useState();
+    const [current, setCurrent] = useState(0);
 
     const prevSlide = () => {
         if (current === 0) {
