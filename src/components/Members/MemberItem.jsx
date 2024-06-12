@@ -3,12 +3,6 @@ import React from "react";
 function MemberItem({name, imgUrl,description, stack, link}){
     return(
         <div className="pr-48 pl-4">
-        <a 
-            href={link}
-            target="_blank"
-            rel="noopenner noreferrer"
-            className="
-            rounded-md overflow-hidden w-28 md:w-full ">
         <img
             src={imgUrl}
             alt="portfolio"
@@ -30,12 +24,11 @@ function MemberItem({name, imgUrl,description, stack, link}){
             </p>
         </div>
         <div className="pl-4 pb-4">
-        <a target="_blank" href="https://www.youtube.com/@whatstheplayproductions" className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white rounded-xl
+        <a target="_blank" href={link} className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white rounded-xl
         text-base px-5 py-2.5 text-center me-2 mb-2 pt-2">
             Instagram
         </a>
         </div>
-        </a>
         </div>
     )
 }
