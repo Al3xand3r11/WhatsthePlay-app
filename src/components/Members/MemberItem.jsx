@@ -2,12 +2,14 @@ import React from "react";
 
 function MemberItem({name, imgUrl,description, stack, link}){
     return(
-        <div className="pr-48 pl-4">
+        <div className="">
+            <div className=" md:pl-0">
         <img
             src={imgUrl}
             alt="portfolio"
             className=" obect-cover cursor-pointer rounded-full w-16 h-16"
         />
+            </div>
         <div className="w-full p-4">
             <h3 className="text-lg md:text-x1 mb-2
             md:mb-3 font-semibold text-white">{name}</h3>

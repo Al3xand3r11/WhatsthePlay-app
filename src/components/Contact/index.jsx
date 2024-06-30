@@ -3,40 +3,42 @@ import Title from "../Title";
 
 const Contact = () => {
     return (
-      <div id="Contact" className='bg-contact-image w-full h-screen bg-cover bg-center '>
-      <div className="flex flex-col mb-10 mx-auto pt-52">
-            <div className="flex justify-center items-center">
+      <div id="Contact" className='bg-contact-image w-full h-auto bg-cover bg-center '>
+      <div className="px-4 mx-auto max-w-screen-md  rounded-lg">
+            <div className="p-4">
+                <div>
+                    <Title>Contact Us</Title>
+                </div>
                 <form
                     action="https://getform.io/f/warklrob"
                     method="POST"
-                    className="flex flex-col w-full md:w-7/12"
+                    className="space-y-8"
                 >
-                    <Title>Contact Us</Title>
+                    <div>
                     <input
                         type="text"
                         name="name"
                         placeholder="Name"
-                        className="p-2 bg-transparent
-                        border-2 rounded-md
-                        focus:outline-none text-white"
+                        className="shadow-sm bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                     />
+                    </div>
+                    <div>
                     <input
                         type="text"
                         name="email"
                         placeholder="Email"
-                        className="my-2 p-2 bg-transparent
-                        border-2 rounded-md
-                        focus:outline-none text-white"
+                        className="shadow-sm bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                     />
+                    </div>
+                    <div>
                     <textarea
                         name="message"
                         placeholder="Message"
                         rows="10"
-                        className="p-2 mb-4 bg-transparent
-                        border-2 rounded-md
-                        focus:outline-none text-white"
+                        className="shadow-sm bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                     >
                     </textarea>
+                    </div>
                     <button 
                         type="button"
                         className="text-center inline-block 
