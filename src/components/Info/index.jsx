@@ -9,7 +9,7 @@ const HeroSection = () => {
     return (
         <div className='bg-hero-image w-full h-screen bg-cover bg-center '>
             <div className="flex flex-row pt-60 ">
-            <div className="invisible md:visible">
+            <div className="invisible md:visible pl-28">
                 <a href="https://www.instagram.com/whatstheplayproductions/" target="_blank">
                 <img src={instagram} className="justify-right items-end w-20 h-20 transfrom transition duration-300 hover:scale-125" />
                 </a>
